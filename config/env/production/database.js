@@ -11,6 +11,7 @@ module.exports = ({ env }) => ({
         password: env('DATABASE_PASSWORD', 'strapi'),
         schema: env('DATABASE_SCHEMA', 'public'), // Not required wtf
         ssl: {
+          rejectUnauthorized: true,
           ca: env('DATABSE_CA')
         },
       },
